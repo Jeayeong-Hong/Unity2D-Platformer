@@ -10,6 +10,11 @@ public class P_Move : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator anim;
     private bool isGrounded;
+    //
+    private int attackIndex = 0;
+    private float lastAttackTime;
+    public float comboDelay = 0.7f;
+    private bool isAttacking = false;
 
     void Awake()
     {
@@ -50,6 +55,36 @@ public class P_Move : MonoBehaviour
         {
             anim.SetBool("isJumping", false);
         }
+
+        // Attack
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            if (Time.time - lastAttackTime > comboDelay)
+            {
+                attackIndex = 1;
+            }
+            else
+            {
+                attackIndex++;
+                if (attackIndex > 3) attackIndex = 1;
+            }
+
+            lastAttackTime = Time.time;
+            anim.SetInteger("attackIndex", attackIndex);
+            anim.SetTrigger("doAttack");
+            isAttacking = true;
+        }
+        //Death 애니메이션 (C 키)
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            anim.SetTrigger("doDeath");
+        }
+
+        // Take Hit 애니메이션 (X 키)
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            anim.SetTrigger("doHit");
+        }
     }
 
     void FixedUpdate()
@@ -78,5 +113,12 @@ public class P_Move : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+    // 애니메이션 이벤트 함수
+    public void EndAttack()
+    {
+        anim.SetInteger("attackIndex", 0);
+        anim.ResetTrigger("doAttack");
+        isAttacking = false;
     }
 }
