@@ -27,4 +27,4 @@ A simple 2D side-scrolling action game built using Unity. This project includes 
 
 1. Clone this repository:
    ```bash
- git clone https://github.com/Jeayeong-Hong/Unity_Movement
+   https://github.com/Jeayeong-Hong/Unity_Movement
