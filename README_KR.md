@@ -29,12 +29,8 @@ Unity로 제작한 간단한 2D 횡스크롤 액션 게임입니다. 캐릭터 �
 | 스페이스바 | 점프     |
 | ESC  | 게임 종료        |
 
-## 스크린샷
-
-(스크린샷이나 게임플레이 GIF를 여기에 첨부하세요)
-
 ## 실행 방법
 
 1. 이 레포지토리를 클론합니다:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   https://github.com/Jeayeong-Hong/Unity_Movement
