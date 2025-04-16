@@ -29,4 +29,4 @@ A simple 2D side-scrolling action game built using Unity. This project includes 
    ```bash
    https://github.com/Jeayeong-Hong/Unity_Movement
 
-##[한국어 README 보러가기 ➡️](README_KR.md)
+[한국어 README 보러가기 ➡️](README_KR.md)
