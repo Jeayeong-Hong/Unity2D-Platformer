@@ -27,4 +27,4 @@ Unity로 제작한 간단한 2D 횡스크롤 액션 게임입니다. 캐릭터 �
 
 1. 이 레포지토리를 클론합니다:
    ```bash
-   git clone https://github.com/Jeayeong-Hong/Unity_Movement
+   https://github.com/Jeayeong-Hong/Unity_Movement
